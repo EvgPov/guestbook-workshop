@@ -60,7 +60,7 @@ git switch -c to-prod
 - [ ] Есть **`Dockerfile`** (зависимости ставятся до кода, `--host 0.0.0.0`) и **`.dockerignore`** (без `.env`, `.git`, `.venv`)
 - [ ] **`compose.yaml`** поднимает `app` + `db`; наружу проброшен только `app`; есть `depends_on: service_healthy`, `healthcheck` и `volume`
 - [ ] **Приёмочный тест пройден:** сообщение добавляется, отображается и переживает `down`/`up`
-- [ ] `git grep -i supersecret` не находит ничего; работа влита в `main` через merge
+- [ ] `git grep -i supersecret -- ':!README.md'`  не находит ничего; работа влита в `main` через merge
 
 ## 🏁 Как завершить
 
